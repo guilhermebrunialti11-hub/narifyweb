@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patinhas Pet Shop — Banho, tosa e clínica veterinária</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+:root{
+  --bg:#FBF6EE; --card:#FFFFFF;
+  --ink:#2C2A25; --ink-soft:#6D6A60;
+  --teal:#2F6F62; --teal-deep:#1F4E44; --coral:#E28B5E;
+  --line:#E7DFCE;
+  --serif:'Fredoka', sans-serif; --sans:'Nunito Sans', sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.6;}
+.wrap{max-width:1100px; margin:0 auto; padding:0 28px;}
+h1,h2,h3{font-family:var(--serif); font-weight:600; margin:0;}
+a{color:inherit; text-decoration:none;}
+header{border-bottom:1px solid var(--line);}
+header .wrap{display:flex; align-items:center; justify-content:space-between; padding:22px 28px;}
+.logo{font-family:var(--serif); font-size:22px; color:var(--teal-deep);}
+nav{display:flex; gap:26px;}
+nav a{font-size:14.5px; color:var(--ink-soft); font-weight:500;}
+nav a:hover{color:var(--teal);}
+.btn{display:inline-block; padding:13px 26px; background:var(--teal); color:#fff; font-size:14.5px; font-weight:600; border-radius:40px; transition:.2s;}
+.btn:hover{background:var(--teal-deep);}
+.btn-outline{background:none; border:1px solid var(--line); color:var(--ink);}
+.btn-outline:hover{border-color:var(--teal); color:var(--teal);}
+
+.hero-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; padding:76px 0;}
+.eyebrow{font-size:13.5px; letter-spacing:0.03em; color:var(--coral); font-weight:600;}
+.hero h1{font-size:clamp(36px,5vw,54px); margin:14px 0 16px;}
+.hero p{color:var(--ink-soft); max-width:44ch; font-size:16.5px;}
+.hero-cta{display:flex; gap:14px; margin-top:28px;}
+.hero-mark{aspect-ratio:1/1; border-radius:50%; background:linear-gradient(150deg, var(--teal), var(--teal-deep)); display:flex; align-items:center; justify-content:center; position:relative;}
+.hero-mark::after{content:''; position:absolute; inset:18px; border-radius:50%; border:1px dashed rgba(255,255,255,0.35);}
+.hero-mark span{font-family:var(--serif); font-size:26px; color:#fff; text-align:center; padding:0 30px;}
+
+section{padding:70px 0;}
+.section-head{text-align:center; margin-bottom:44px;}
+.section-head p{color:var(--coral); font-size:13.5px; font-weight:600; margin-bottom:8px;}
+
+.services{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+.service{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px;}
+.service .dot{width:38px; height:38px; border-radius:50%; background:var(--teal); margin-bottom:16px;}
+.service h3{font-size:18px; margin-bottom:8px;}
+.service p{color:var(--ink-soft); font-size:14px;}
+
+.gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+.gallery .ph{height:190px; border-radius:16px; border:1px solid var(--line);}
+.gallery .ph:nth-child(1){background:linear-gradient(150deg, var(--teal), var(--teal-deep));}
+.gallery .ph:nth-child(2){background:linear-gradient(150deg, var(--coral), #B8623A);}
+.gallery .ph:nth-child(3){background:linear-gradient(150deg, var(--card), var(--line));}
+
+.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+.about-mark{aspect-ratio:5/4; border-radius:20px; background:linear-gradient(140deg, var(--teal-deep), var(--teal)); display:flex; align-items:center; justify-content:center;}
+.about-mark span{font-family:var(--serif); font-size:52px; color:rgba(255,255,255,0.7);}
+.about p{color:var(--ink-soft); margin-bottom:16px; font-size:16px;}
+
+footer{border-top:1px solid var(--line); padding:44px 0; text-align:center; color:var(--ink-soft); font-size:13.5px;}
+footer a{color:var(--teal);}
+
+@media (max-width:820px){
+  nav{display:none;}
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-mark{order:-1; max-width:260px; margin:0 auto;}
+  .services{grid-template-columns:1fr 1fr;}
+  .gallery{grid-template-columns:1fr;}
+  .about-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="logo">Patinhas</span>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="btn" href="#contato">Agendar horário</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">PET SHOP E CLÍNICA · FOZ DO IGUAÇU</p>
+      <h1>Cuidado de verdade para o seu melhor amigo.</h1>
+      <p>Banho, tosa e atendimento veterinário num ambiente tranquilo, pensado para o bem-estar do seu pet.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contato">Agendar horário</a>
+        <a class="btn btn-outline" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+    <div class="hero-mark"><span>Patinhas</span></div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="section-head">
+      <p>SERVIÇOS</p>
+      <h2>Como cuidamos do seu pet.</h2>
+    </div>
+    <div class="services">
+      <div class="service"><div class="dot"></div><h3>Banho</h3><p>Banho completo com produtos hipoalergênicos.</p></div>
+      <div class="service"><div class="dot"></div><h3>Tosa</h3><p>Tosa higiênica ou na tesoura, do jeito que seu pet gosta.</p></div>
+      <div class="service"><div class="dot"></div><h3>Consulta</h3><p>Atendimento veterinário para check-up e vacinas.</p></div>
+      <div class="service"><div class="dot"></div><h3>Hotel</h3><p>Hospedagem para quando você precisar viajar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ambiente">
+  <div class="wrap">
+    <div class="section-head">
+      <p>AMBIENTE</p>
+      <h2>Onde seu pet fica à vontade.</h2>
+    </div>
+    <div class="gallery"><div class="ph"></div><div class="ph"></div><div class="ph"></div></div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-mark"><span>🐾</span></div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:14px;">SOBRE O PATINHAS</p>
+      <h2 style="margin-bottom:18px; font-size:30px;">Cuidado que a gente sente.</h2>
+      <p>O Patinhas nasceu do carinho por animais e da vontade de oferecer um atendimento próximo, sem pressa e sem estresse para o pet.</p>
+      <p>Aqui, cada bicho é recebido como se fosse da casa.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <p>Rua dos Girassóis, 340 — Foz do Iguaçu, PR</p>
+    <p>Seg. a sáb., 8h às 18h · <a href="#">(45) 99999-0000</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
