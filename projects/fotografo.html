@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Almeida — Fotografia de retrato e ensaio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Jost:wght@400;500;600&display=swap');
+:root{
+  --bg:#0C0C0B; --card:#161613;
+  --ink:#F2F0EC; --ink-soft:#9C978D;
+  --rust:#C48A55; --line:rgba(242,240,236,0.14);
+  --serif:'EB Garamond', Georgia, serif; --sans:'Jost', sans-serif;
+}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.6;}
+.wrap{max-width:1100px; margin:0 auto; padding:0 28px;}
+h1,h2,h3{font-family:var(--serif); font-weight:400; margin:0;}
+a{color:inherit; text-decoration:none;}
+header{position:absolute; top:0; left:0; right:0; z-index:5; padding:26px 0;}
+header .wrap{display:flex; align-items:center; justify-content:space-between;}
+.logo{font-family:var(--serif); font-style:italic; font-size:22px;}
+nav{display:flex; gap:30px;}
+nav a{font-size:13px; letter-spacing:0.05em; text-transform:uppercase; color:var(--ink-soft);}
+nav a:hover{color:var(--ink);}
+.btn{display:inline-block; padding:12px 24px; border:1px solid var(--rust); color:var(--rust); font-size:13px; letter-spacing:0.03em; transition:.2s;}
+.btn:hover{background:var(--rust); color:var(--bg);}
+
+.hero{position:relative; height:92vh; min-height:600px; display:flex; align-items:flex-end;}
+.hero .ph{position:absolute; inset:0; background:
+  radial-gradient(circle at 30% 20%, rgba(196,138,85,0.25), transparent 55%),
+  linear-gradient(165deg, #1B1A16 0%, #0C0C0B 75%);
+}
+.hero .ph::after{content:''; position:absolute; inset:0; background:repeating-linear-gradient(90deg, rgba(242,240,236,0.03) 0 1px, transparent 1px 64px);}
+.hero-inner{position:relative; padding:60px 0 70px;}
+.eyebrow{font-size:12.5px; letter-spacing:0.12em; color:var(--rust); text-transform:uppercase;}
+.hero h1{font-size:clamp(46px,8vw,96px); margin:18px 0 16px;}
+.hero p{color:var(--ink-soft); max-width:44ch; font-size:16.5px;}
+
+section{padding:90px 0;}
+.section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:44px; gap:20px; flex-wrap:wrap;}
+.section-head p{color:var(--ink-soft); font-size:14.5px; max-width:36ch;}
+
+/* contact sheet — grade de "quadros" no lugar das fotos */
+.portfolio-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:6px;}
+.portfolio-grid figure{margin:0; aspect-ratio:4/5; position:relative; overflow:hidden; background:var(--card); border:1px solid var(--line);}
+.portfolio-grid figure:nth-child(1){grid-row:span 2; aspect-ratio:auto;}
+.frame-tone{position:absolute; inset:0;}
+.t1{background:linear-gradient(155deg,#2A241D,#0C0C0B 80%);}
+.t2{background:linear-gradient(155deg,#231D19,#0C0C0B 80%);}
+.t3{background:linear-gradient(155deg,#1E1B16,#0C0C0B 80%);}
+.t4{background:linear-gradient(155deg,#26201A,#0C0C0B 80%);}
+.t5{background:linear-gradient(155deg,#201C17,#0C0C0B 80%);}
+figcaption{position:absolute; left:14px; bottom:12px; font-family:var(--mono, var(--sans)); font-size:11.5px; letter-spacing:0.04em; color:var(--ink-soft);}
+.frame-num{position:absolute; top:14px; right:16px; font-size:11px; color:var(--rust); letter-spacing:0.05em;}
+
+.about-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:60px; align-items:center;}
+.about-mark{aspect-ratio:4/5; background:linear-gradient(150deg,#221D18,#0C0C0B); border:1px solid var(--line); display:flex; align-items:center; justify-content:center;}
+.about-mark span{font-family:var(--serif); font-style:italic; font-size:52px; color:rgba(196,138,85,0.55);}
+.about p{color:var(--ink-soft); margin-bottom:16px; max-width:52ch; font-size:16px;}
+
+footer{border-top:1px solid var(--line); padding:44px 0; text-align:center; color:var(--ink-soft); font-size:13.5px;}
+footer a{color:var(--rust);}
+
+@media (max-width:820px){
+  nav{display:none;}
+  .portfolio-grid{grid-template-columns:1fr 1fr;}
+  .portfolio-grid figure:nth-child(1){grid-column:span 2; grid-row:auto; aspect-ratio:4/3;}
+  .about-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="logo">Lucas Almeida</span>
+    <nav>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="btn" href="#contato">Agendar ensaio</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="ph"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Fotografia · Retrato e ensaio</p>
+    <h1>Lucas Almeida</h1>
+    <p>Retratos e ensaios que capturam quem você é — em estúdio ou ao ar livre, com luz natural e olhar atento a cada detalhe.</p>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Trabalhos recentes.</h2>
+      <p>Uma seleção de ensaios e retratos dos últimos meses.</p>
+    </div>
+    <div class="portfolio-grid">
+      <figure><div class="frame-tone t1"></div><span class="frame-num">01</span><figcaption>Ensaio externo</figcaption></figure>
+      <figure><div class="frame-tone t2"></div><span class="frame-num">02</span><figcaption>Retrato em estúdio</figcaption></figure>
+      <figure><div class="frame-tone t3"></div><span class="frame-num">03</span><figcaption>Ensaio urbano</figcaption></figure>
+      <figure><div class="frame-tone t4"></div><span class="frame-num">04</span><figcaption>Retrato natural</figcaption></figure>
+      <figure><div class="frame-tone t5"></div><span class="frame-num">05</span><figcaption>Ensaio ao ar livre</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-mark"><span>LA</span></div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:14px;">Sobre</p>
+      <h2 style="margin-bottom:18px; font-size:32px; font-style:italic;">Um olhar atento a cada detalhe.</h2>
+      <p>Fotografo pessoas há alguns anos, sempre buscando registrar quem elas realmente são — sem poses forçadas, sem pressa.</p>
+      <p>Cada ensaio é planejado com você, do local à luz, para que o resultado pareça genuinamente seu.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <p>Atendimento em Foz do Iguaçu e região</p>
+    <p>Ensaios sob agendamento · <a href="#">(45) 99999-0000</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
